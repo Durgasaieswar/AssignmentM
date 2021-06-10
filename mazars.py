@@ -17,9 +17,7 @@ def ping_endpoint():
 
     payload = request.json
     res = requests.get(payload["url"])
-    from pprint import pprint
     res_js = res.json()
-    pprint(res_js)
     return jsonify(res_js)
 
 
